@@ -1,0 +1,66 @@
+// FORM STYLES //
+
+.form {
+    display: flex;
+    flex-direction: column;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+
+    height: 400px;
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.formLabel, .formInput {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+    &:hover{
+        text-shadow: #2152A7 0px 0px 20px;
+    }
+}
+
+.formHeader {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submitBtn {
+    display: flex;
+    justify-content: center;
+}
+
+.error {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    color: #fa0000;
+    font-size: 14px;
+    text-align: center;
+    z-index: 10;
+    background-color: #ff000080;
+    padding: 5px;
+    border-radius: 8px;
+
+    &:hover {
+        box-shadow: #ffffff20 0px 0px 20px;
+    }
+  }

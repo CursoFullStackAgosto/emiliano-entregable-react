@@ -1,0 +1,60 @@
+/* body font */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Parkinsans:wght@300..800&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-family: roboto, sans-serif;
+
+    width: 100%;
+    height:100%;
+
+    background-color: #131313;
+    background-image: 
+        radial-gradient(at 47% 33%, #0f2376 0, transparent 59%), 
+        radial-gradient(at 82% 65%, #2151a6 0, transparent 55%);
+
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+// OLD BACKGROUND
+
+    // width: 100%;
+    // height: 100%;
+
+    // background-color: #131313;
+    // background-image: 
+    //     radial-gradient(at 47% 33%, #0f2376 0, transparent 59%), 
+    //     radial-gradient(at 82% 65%, #2151a6 0, transparent 55%);
+    // background-size: cover;
+    // background-position: center;
+
+.container {
+    width: 500px;
+    backdrop-filter: blur(15px) saturate(133%);
+    -webkit-backdrop-filter: blur(15px) saturate(133%);
+    background-color: #141e3096;
+    border-radius: 12px;
+    border: 1px solid #ffffff20;
+}
+
+ol{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}

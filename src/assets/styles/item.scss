@@ -1,0 +1,200 @@
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    font-size: 12px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 4px;
+
+    border-radius: 12px;
+    border-top: 2px solid #ffffff20;
+    border-bottom: 2px solid #ffffff20;
+    border-left: 8px solid #ffffff20;
+    border-right: 0px solid #ffffff20;
+
+    &:hover {
+        box-shadow: 0 0 10px #ffffff80;
+    }
+
+    &.completed {
+        animation: completed-animation 0.5s cubic-bezier(0.42, 0, 0.58, 1);;
+        background-color: #00ff0080;
+    }
+    
+    &.inProgress {
+        animation: in-progress-animation 0.5s cubic-bezier(0.42, 0, 0.58, 1);;
+        background-color: #ff8c00b9;
+    } 
+}
+
+@keyframes in-progress-animation {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 0.5;
+    }
+  }
+  
+  @keyframes completed-animation {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+  }
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+
+    margin: 0px;
+    width: 380px;
+    padding-left: 10px;
+
+    .title {
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0px;
+        padding: 2px;
+    }
+
+    .date { 
+        font-size: 10px;
+        margin: 4px 0px 0px 8px;
+        padding: 0px;
+    }
+
+    .description {
+        font-size: 10px;
+        margin: 4px 0px 4px 8px;
+        padding: 0px;
+    }
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: right;
+    text-align: center;
+
+    width: 20px;
+
+}
+
+// --Buttons-- //
+
+// Delete //
+
+/* From Uiverse.io by vinodjangid07 */
+ /*       modified by me ;)       */
+
+.deleteButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    background-color: #ff3636b5;
+    cursor: pointer;
+    border: 3px solid #ffc9c9c1;
+    transition-duration: 0.3s;
+
+    .deleteBottom {
+        width: 8px;
+  }
+    .deleteTop {
+        width: 10px;
+        transform-origin: right;
+        transition-duration: 0.3s;
+    }
+    &:hover .deleteTop {
+        transform: rotate(45deg);
+    }
+    &:hover {
+        background-color: #ff0000;
+        box-shadow: 0 0 10px #ffffff80;
+    }
+    &:active {
+        transform: scale(0.9);
+  }
+}
+
+// Edit //
+
+.edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    cursor: pointer;
+    color: white;
+
+    backdrop-filter: blur(15px) saturate(133%);
+    -webkit-backdrop-filter: blur(15px) saturate(133%);
+    background-color: #0f2376;
+
+        &:hover{
+            box-shadow: 0 0 10px #ffffff80;
+            background-color: #2151a6;
+        }
+}
+
+// checkbox //
+
+.checkBox {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #ffffff00;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 3px #0f2376;
+    background-color: #adcafe;
+  }
+  
+  .checkBox div {
+    width: 60px;
+    height: 60px;
+    background-color: #2151a6;
+    top: -52px;
+    left: -52px;
+    position: absolute;
+    transform: rotateZ(45deg);
+    z-index: 100;
+  }
+  
+  .checkBox input[type=checkbox]:checked + div {
+    left: -10px;
+    top: -10px;
+  }
+  
+  .checkBox input[type=checkbox] {
+    position: absolute;
+    left: 50px;
+    visibility: hidden;
+  }
+  
+  .transition {
+    transition: 300ms ease;
+  }

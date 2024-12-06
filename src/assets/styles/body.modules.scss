@@ -1,0 +1,70 @@
+.formPosition {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 400px;
+}
+
+.Btn {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    cursor: pointer;
+    width: 200px;
+    margin-top: 20px;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 18px;
+
+    
+    backdrop-filter: blur(15px) saturate(133%);
+    -webkit-backdrop-filter: blur(15px) saturate(133%);
+    background-color: #141e3096;
+    border-radius: 12px;
+    border: 1px solid #ffffff20;
+
+    overflow: hidden;
+
+    &:hover{
+        box-shadow: #2152A7 0px 0px 20px;
+        border: 2px solid #2152A7;
+    }
+
+    &:hover::before {
+        animation: shine 1.5s ease-out infinite;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100%;
+        background-image: linear-gradient(
+          120deg,
+          #ffffff00 30%,
+          #7cb5ffcc,
+          #ffffff00 70%
+        );
+        top: 0;
+        left: -100px;
+        opacity: 0.6;
+      }
+}
+
+@keyframes shine {
+    0% {
+      left: -100px;
+    }
+  
+    60% {
+      left: 100%;
+    }
+  
+    to {
+      left: 100%;
+    }
+  }
